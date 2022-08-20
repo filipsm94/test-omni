@@ -1,24 +1,4 @@
-<!-- <header>
-  <nav class="menu">
-    <ng-container *ngIf="isLogged$ | async; else loginTemplate">
-      <ul>
-        <li><a [routerLink]="['/products']" routerLinkActive="active">Productos</a></li>
-        <li><a (click)="loggout()">Cerrar Sesion</a></li>
-      </ul>
-    </ng-container>
-    <ng-template #loginTemplate>
-      <ul>
-        <li><a [routerLink]="['/login']" routerLinkActive="active">Login</a></li>
-      </ul>
-    </ng-template>
-  </nav>
-</header> -->
 <section class="content">
-  <!-- <section>
-    <ng-image-slider [images]="imageObject" [imageSize]="imageSizeObject" [imagePopup]="false" #nav></ng-image-slider>
-    <img src="assets/cars/bmw-wall.jpg" alt="bmw" sizes="(max-width: 710px) 120px,
-    (max-width: 991px) 193px," srcset="">
-  </section> -->
   <router-outlet></router-outlet>
 </section>
 <footer>
