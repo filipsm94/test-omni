@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-image">
+            <img [src]="car.Photo" [alt]="car.Brand" srcset="">
+        </div>
+        <div class="card-title">
+            <h4>
+                {{car.Brand}} - {{car.Model}}
+            </h4>
+        </div>
+        <div class="card-description">
+            {{car.description | opaqueText: 60}}
+        </div>
+        <div class="card-action"> <a (click)="sendToDetail()">Ver más...</a></div>
+    </div>
+</div>

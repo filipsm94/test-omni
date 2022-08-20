@@ -1,0 +1,12 @@
+<form class="loginForm mt-2" [formGroup]="filterForm">
+    <input type="text" placeholder="Ingresa texto" formControlName="value" />
+    <div *ngIf="value?.invalid && (value?.dirty || value?.touched)" class="alert alert-danger">
+        <div *ngIf="value?.errors?.required">
+            El campo es requerido.
+        </div>
+        <div *ngIf="value?.errors?.minlength">
+            El campo debe tener minimo 2 caracteres.
+        </div>
+    </div>
+    <button [disabled]="!filterForm.valid" (click)="submit()" class="btn">Filtrar</button>
+</form>

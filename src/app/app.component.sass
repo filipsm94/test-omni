@@ -1,0 +1,22 @@
+@use 'src/mixin' as mixin
+
+.content
+    grid-area: main
+    min-height: 90vh
+    padding-block: 1rem
+    box-sizing: border-box
+
+    @include mixin.screen(1440px)
+        max-width: 1440px
+
+footer
+    height: 10vh
+    grid-area: footer
+    text-align: center
+    background-color: #190840
+    color: white
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%

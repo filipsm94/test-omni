@@ -1,0 +1,9 @@
+<section class="dashboard">
+    <h2>Encuentra el mejor carro para tí</h2>
+    <p>Navega y descubre autos increibles para usar en tu cuidad</p>
+    <app-filter-form (valueFilterEvent)="filterListCars($event)"></app-filter-form>
+    <div class="car-list">
+        <app-card-car *ngFor="let car of listOfCars" [car]="car" (carSelectionEvent)="goToSelectionCarToDetail($event)">
+        </app-card-car>
+    </div>
+</section>
