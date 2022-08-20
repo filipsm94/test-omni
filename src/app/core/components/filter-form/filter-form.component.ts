@@ -33,7 +33,6 @@ export class FilterFormComponent implements OnInit {
     this.infoLogin = { ...this.filterForm.value };
     try {
       this.valueFilterEvent.emit(this.infoLogin.value);
-      // const user = await this.authService.loginUser(this.infoLogin);
     } catch (error) {
       this.hasError = true;
     }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { empytCar } from 'src/app/shared/constans/car.constant';
 import { ICarModel } from 'src/app/shared/models/car.model';
@@ -10,7 +10,7 @@ import { CarService } from '../../services/car.service';
   templateUrl: './detail-car.component.html',
   styleUrls: ['./detail-car.component.sass']
 })
-export class DetailCarComponent implements OnInit {
+export class DetailCarComponent implements OnInit, OnDestroy {
   public car: ICarModel;
 
   urlImage = {'background-image':'url(car.Photo)'}
@@ -38,6 +38,10 @@ export class DetailCarComponent implements OnInit {
 
   goToShowCase():void{
     this.router.navigate(['/rentcar'])
+  }
+
+  ngOnDestroy(): void {
+    this.storageService.clearInfo()
   }
 
 }
